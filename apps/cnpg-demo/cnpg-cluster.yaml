@@ -9,3 +9,7 @@ spec:
     kind: ImageCatalog
     major: 17
     name: postgresql
+  resources:
+    requests:
+      cpu: 1
+      memory: 1Gi
