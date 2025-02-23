@@ -12,10 +12,11 @@ spec:
     apiGroup: postgresql.cnpg.io
   resources:
     requests:
-      cpu: 1000m
-      memory: 1Gi
+      memory: "1024Mi"
+      cpu: 1
     limits:
-      memory: 1Gi
+      memory: "1024Mi"
+      cpu: 1
   storage:
     size: 50Gi
     storageClass: ionos-enterprise-ssd
