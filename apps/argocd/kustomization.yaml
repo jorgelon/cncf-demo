@@ -5,3 +5,5 @@ resources:
   - repo.yaml
   - appset.yaml
   - appproject.yaml
+patches:
+  - path: overlays/argocd-cm.yaml
