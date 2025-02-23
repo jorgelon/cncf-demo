@@ -9,7 +9,7 @@ spec:
     kind: ImageCatalog
     major: 17
     name: postgresql
-    apiGroup: v1
+    apiGroup: postgresql.cnpg.io
   resources:
     requests:
       cpu: 1
