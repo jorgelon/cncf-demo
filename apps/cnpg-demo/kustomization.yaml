@@ -1,0 +1,3 @@
+resources:
+  - cnpg-cluster.yaml
+  - cnpg-imagecatalog.yaml

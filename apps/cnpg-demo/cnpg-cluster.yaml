@@ -1,0 +1,11 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: cnpg-demo
+spec:
+  enablePDB: false
+  instances: 1
+  imageCatalogRef:
+    kind: ImageCatalog
+    major: 17
+    name: postgresql
