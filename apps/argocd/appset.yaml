@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cncf-demo
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/jorgelon/cncf-demo
+      revision: main
+      directories:
+        - path: apps/*
+  template:
+    metadata:
+      name: "{{path.basename}}"
+      annotations:
+        argocd.argoproj.io/manifest-generate-paths: .
+    spec:
+      project: my-project
+      syncPolicy: 
+        automated:
+          selfHeal: true    
+        syncOptions:
+        - CreateNamespace=true  
+      source:
+        path: "{{path}}"
+        repoURL: https://github.com/jorgelon/cncf-demo
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: "{{path.basename}}"
