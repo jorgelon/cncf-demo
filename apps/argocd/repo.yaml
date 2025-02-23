@@ -6,4 +6,5 @@ metadata:
     argocd.argoproj.io/secret-type: repository
 stringData:
   url: https://github.com/jorgelon/cncf-demo
-  
+  project: cncf-demo
+

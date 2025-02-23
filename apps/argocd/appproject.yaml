@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: cncf-demo
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  description: "CNCF DEMO"
+  sourceRepos:
+  - 'https://github.com/jorgelon/cncf-demo'
+  destinations:
+  - namespace: '*'
+    server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  # Deny all namespaced-scoped resources from being created, except for Deployment and StatefulSet
+  namespaceResourceWhitelist:
+  - group: '*'
+    kind: '*'
