@@ -20,7 +20,9 @@ spec:
         automated:
           selfHeal: true    
         syncOptions:
-        - CreateNamespace=true  
+        - CreateNamespace=true
+        - ApplyOutOfSyncOnly=true
+        - ServerSideApply=true
       source:
         path: "{{path}}"
         repoURL: https://github.com/jorgelon/cncf-demo
