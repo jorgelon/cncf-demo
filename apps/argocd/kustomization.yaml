@@ -3,3 +3,4 @@ resources:
   - core-install.yaml
   - ns.yaml
   - repo.yaml
+  - appset.yaml
