@@ -16,3 +16,6 @@ spec:
       memory: 1Gi
     limits:
       memory: 1Gi
+  storage:
+    size: 50Gi
+    storageClass: ionos-enterprise-ssd
