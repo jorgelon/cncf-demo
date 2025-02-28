@@ -26,3 +26,6 @@ spec:
     size: 10Gi
   primaryUpdateMethod: restart
   enablePDB: true
+  priorityClassName: high
+  monitoring:
+    enablePodMonitor: true
