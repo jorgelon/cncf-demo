@@ -21,3 +21,8 @@ spec:
   storage:
     size: 50Gi
     storageClass: ionos-enterprise-ssd
+  walStorage:
+    storageClass: ionos-enterprise-ssd
+    size: 10Gi
+  primaryUpdateMethod: restart
+  enablePDB: true

@@ -1,5 +1,6 @@
 namespace: kube-system
 resources:
   - metrics-server.yaml
+  - pc-high.yaml
 patches:
   - path: metrics-server-ignore-tls.yaml
