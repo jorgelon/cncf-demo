@@ -3,8 +3,11 @@ kind: Cluster
 metadata:
   name: cnpg-demo
 spec:
-  enablePDB: false
-  instances: 1
+  affinity:
+    enablePodAntiAffinity: true
+    podAntiAffinityType: required
+    topologyKey: kubernetes.io/hostname
+  instances: 3
   imageCatalogRef:
     kind: ImageCatalog
     major: 17
